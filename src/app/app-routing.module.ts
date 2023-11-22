@@ -36,7 +36,9 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+    loadChildren: () => import('./pages/network/network.module').then(m => m.NetworkModule)
+    // redirectTo: 'avail',
+    // loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
   },
   {path: '**', component: PageNotFoundComponent}
 ];

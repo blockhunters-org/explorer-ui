@@ -48,23 +48,25 @@ export class NetworkComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     // Change network when param changes in route.
-    this.route.params
-      .pipe(
-        map((p) => p['network']),
-        distinctUntilChanged(),
-        takeUntil(this.destroyer)
-      )
-      .subscribe({
-        next: (network: string) => {
-          if (this.config.networks[network]) {
-            this.ns.setNetwork(network);
-            this.vars.network.next(network);
-            this.vars.blockNumber.next(0);
-          } else {
-            this.router.navigate(['/']);
-          }
-        }
-      });
+    // this.route.params
+    //   .pipe(
+    //     map((p) => p['network']),
+    //     distinctUntilChanged(),
+    //     takeUntil(this.destroyer)
+    //   )
+    //   .subscribe({
+    //     next: (network: string) => {
+    //     }
+    //   });
+
+    const network = "avail";
+    if (this.config.networks[network]) {
+      this.ns.setNetwork(network);
+      this.vars.network.next(network);
+      this.vars.blockNumber.next(0);
+    } else {
+      this.router.navigate(['/']);
+    }
 
     // Pass the last loaded number to the variables service, so other parts of the application can pick it up.
     this.ns.currentNetwork.pipe(

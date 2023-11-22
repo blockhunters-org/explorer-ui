@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
     for (const [slug, network] of Object.entries(this.config.networks)) {
       if (network.relayChain) {
         this.groups[network.relayChain].parachains[slug] = network;
-      } else if (!this.groups[slug]) {
+      } else if (!this.groups || !this.groups[slug]) {
         if (!this.others) {
           this.others = {};
         }

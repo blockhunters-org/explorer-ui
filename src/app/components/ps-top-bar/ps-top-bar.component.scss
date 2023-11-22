@@ -54,6 +54,12 @@ ps-top-bar {
   order: 0;
 }
 
+.ps-top-bar-brand img {
+  width: 203px;
+  height: 30px;
+  order: 0;
+}
+
 .ps-top-bar-brand-img {
   height: 100%;
   object-fit: contain;
@@ -137,7 +143,7 @@ ps-top-bar .ps-topbar-container {
 
       &:not(.mat-focused, .ng-dirty) {
         .mdc-text-field {
-          background: #f354a1;
+          background: #383c4d;
           color: #fff;
 
           ::placeholder {
