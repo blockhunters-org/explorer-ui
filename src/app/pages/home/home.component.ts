@@ -58,6 +58,7 @@ export class HomeComponent implements OnInit {
         if (!this.others) {
           this.others = {};
         }
+        console.log(network)
         this.others[slug] = network;
       }
     }

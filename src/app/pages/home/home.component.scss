@@ -32,10 +32,10 @@
 
 @keyframes sunrise-circle {
   from {
-    fill: #cf25ff;
+    fill: #144e88;
   }
   to {
-    fill: #fa7878;
+    fill: #2ebcf8;
   }
 }
 
@@ -68,11 +68,11 @@
 
 @keyframes sunrise-planet {
   from {
-    background-color: #643d70;
+    background-color: #144e88;
     background-position: center 0;
   }
   to {
-    background-color: #ff6482;
+    background-color: #2ebcf8;
     background-position: center 150px;
   }
 }
@@ -82,7 +82,7 @@
   margin: 0;
   padding: 0;
   height: 150px;
-  background: radial-gradient(at 30% 150%, #cf25ff, #350659 50%, #000) bottom;
+  background: radial-gradient(at 30% 150%, #2ebcf8, #144e88 50%, #000) bottom;
   background-size: 100% 400px;
   text-indent: -9999px;
   overflow: hidden;
@@ -96,6 +96,12 @@
     width: 189px;
     animation: sunrise-logo 5s ease-out;
   }
+  img {
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+    width: 80px;
+  }
 
   circle {
     opacity: 0;
@@ -107,7 +113,7 @@
   }
 
   path:nth-of-type(2) {
-    fill: #fa7878;
+    fill: #2ebcf8;
   }
 
 }
@@ -128,7 +134,7 @@
 }
 .home {
   padding-bottom: 40px;
-  background: #ff6482 linear-gradient(#fa7878 50px, #fa787800 150px);
+  background: #144e88 linear-gradient(#2ebcf8 50px, #2ebcf800 150px);
   color: #fff;
   animation: sunrise-planet 5s ease-out forwards;
 
@@ -142,12 +148,12 @@
     flex: 0 0 auto;
     width: 140px;
     height: 230px;
-    background-size: 60% auto;
+    background-size: 80% auto;
     background-repeat: no-repeat;
     background-position: 50% calc(100% - 20px);
-    background-color: #fff;
+    background-color: #383c4d;
     box-shadow: 0 2px 1px -1px #0003,0 1px 1px #00000024,0 1px 3px #0000001f;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;

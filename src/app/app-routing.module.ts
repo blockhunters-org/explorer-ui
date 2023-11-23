@@ -36,9 +36,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./pages/network/network.module').then(m => m.NetworkModule)
-    // redirectTo: 'avail',
-    // loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+    // redirectTo: 'goldberg-testnet',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
   },
   {path: '**', component: PageNotFoundComponent}
 ];

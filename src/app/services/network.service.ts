@@ -46,7 +46,7 @@ export interface NetworkProperties {
 export class NetworkService {
   private settingNetwork: string;
   private settingNonce = 0;
-  currentNetwork = new BehaviorSubject<string>('avail');
+  currentNetwork = new BehaviorSubject<string>('');
   currentNetworkProperties = new BehaviorSubject<NetworkProperties | undefined>(undefined);
   blockHarvester: BlockHarvester
   online: BehaviorSubject<boolean>;
